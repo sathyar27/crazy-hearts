@@ -1,0 +1,177 @@
+body {
+	overflow: hidden;
+}
+.caption p span {
+	font-size: 13px;
+	float: right;
+	display: inline-block;
+	position: relative;
+}
+.count {
+	color: #fff !important;
+	position: absolute;
+	right: -40px;
+	top: 2px;
+	font-size: 20px;
+}
+.heartNew {
+	cursor: pointer;
+	float: left;
+	margin-right: 32px;
+	position: relative;
+	font-size: 1.5em;
+	width: 1.1em;
+	height: 1.1em;
+	-webkit-tap-highlight-color: transparent;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	float: right;
+	margin-top: -42px;
+	transform: scale(0.6);
+	color: #fff;
+}
+.heartNew:before {
+	content: "\e900";
+	font-family: 'icomoon' !important;
+	font-size: 1em;
+	line-height: 1;
+	speak: none;
+	position: absolute;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	text-indent: -11px;
+}
+.heartNew:after {
+	border: 1px solid #e8575f;
+	-webkit-border-radius: 100%;
+	-webkit-background-clip: padding-box;
+	-moz-border-radius: 100%;
+	-moz-background-clip: padding;
+	border-radius: 100%;
+	background-clip: padding-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	content: '';
+	position: absolute;
+	width: 216%;
+	height: 216%;
+	top: -65%;
+	left: -58%;
+	opacity: 0;
+	transform: scale(0);
+}
+.activeNew:after {
+	animation: pinkCircle 0.55s;
+}
+.activeNew:before {
+	/*pinkheartNew*/
+	color: #e8575f;
+	animation: pinkheartNew 1s;
+	animation-delay: 0.3s;
+	transition: color 0.1s 0.1s;
+}
+.inActiveNew:after {
+	animation: pinkCircle2 0.55s;
+}
+.inActiveNew:before {
+	/*pinkheartNew*/
+	color: #fff;
+	animation: noheartNew 0.55s;
+}
+lesshat-selector {
+	-lh-property: 0;
+}
+@keyframes pinkCircle {
+	0% {
+		opacity: 1;
+		transform: scale(0);
+		background: #e8575f;
+	}
+	30% {
+		background: #e8575f;
+	}
+	31% {
+		background: transparent;
+		border: 25px solid #e8575f;
+		opacity: 1;
+	}
+	100% {
+		transform: scale(1);
+		border: 0 solid #e8575f;
+		opacity: 1;
+	}
+}
+lesshat-selector {
+	-lh-property: 0;
+}
+@keyframes pinkCircle2 {
+	0% {
+		opacity: 1;
+		transform: scale(0);
+		background: #e8575f;
+	}
+	30% {
+		background: #e8575f;
+	}
+	31% {
+		background: transparent;
+		border: 25px solid #e8575f;
+		opacity: 1;
+	}
+	100% {
+		transform: scale(1);
+		border: 0 solid #e8575f;
+		opacity: 1;
+	}
+}
+lesshat-selector {
+	-lh-property: 0;
+}
+@keyframes noheartNew {
+	0% {
+		color: #e8575f;
+	}
+	39% {
+		color: #e8575f;
+	}
+	40% {
+		color: #fff;
+	}
+	100% {
+		color: #fff;
+	}
+}
+lesshat-selector {
+	-lh-property: 0;
+}
+@keyframes pinkheartNew {
+	0%, 11.1% {
+		transform: none;
+		transform: scale(1.5);
+	}
+	100% {
+		transform: none;
+	}
+	22.2% {
+		transform: skewX(-6.25deg) skewY(-6.25deg) scale(1);
+	}
+	33.3% {
+		transform: skewX(3.125deg) skewY(3.125deg);
+	}
+	44.4% {
+		transform: skewX(-1.5625deg) skewY(-1.5625deg);
+	}
+	55.5% {
+		transform: skewX(.78125deg) skewY(.78125deg);
+	}
+	66.6% {
+		transform: skewX(-0.390625deg) skewY(-0.390625deg);
+	}
+	77.7% {
+		transform: skewX(.1953125deg) skewY(.1953125deg);
+	}
+	88.8% {
+		transform: skewX(-0.09765625deg) skewY(-0.09765625deg);
+	}
+}

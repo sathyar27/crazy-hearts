@@ -1,0 +1,145 @@
+body {
+	overflow: hidden;
+}
+.caption p i {
+	font-size: 13px;
+	margin-right: 3px;
+}
+.caption p span {
+	font-size: 13px;
+	float: right;
+	display: inline-block;
+	position: relative;
+}
+.caption a {
+	color: #fff;
+	float: right;
+}
+.box:nth-child(3n+2) .hearts .caption {
+	background: #ff656d;
+}
+.box:nth-child(3n+2) .hearts span {
+	color: #ff656d;
+}
+.box:nth-child(3n+3) .hearts .caption {
+	background: #6fcff5;
+}
+.box:nth-child(3n+3) .hearts span {
+	color: #6fcff5;
+}
+.active a > i {
+	transform: scale(1.7) translateX(-3px);
+}
+.caption a i {
+	transition: 0.3s all;
+	display: inline-block;
+}
+.hearts span {
+	font-size: 30px;
+	color: #efb357;
+	position: absolute;
+	text-shadow: 1px 1px 0 #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 3px 3px 5px rgba(51, 51, 51, 0.03);
+}
+.hearts > .icon-heart:nth-child(6) {
+	font-size: 32px;
+	transform: rotate(-4deg);
+}
+.hearts .icon-heart:nth-child(2) {
+	transform: rotate(8deg);
+}
+.hearts .icon-heart:nth-child(3) {
+	transform: rotate(8deg);
+}
+.hearts .icon-heart:nth-child(4) {
+	transform: rotate(-11deg);
+}
+.hearts .icon-heart:nth-child(5) {
+	font-size: 27px;
+	transform: rotate(9deg);
+}
+.active .icon-heart:nth-child(6) {
+	animation: heartOne 1.8s cubic-bezier(0.04, 0.32, 0.97, 0.88);
+}
+.active .icon-heart:nth-child(2) {
+	animation: heartTwo 1.8s cubic-bezier(0.04, 0.32, 0.97, 0.88);
+}
+.active .icon-heart:nth-child(3) {
+	animation: heartThree 2s cubic-bezier(0.04, 0.32, 0.97, 0.88);
+}
+.active .icon-heart:nth-child(4) {
+	animation: heartFour 2s cubic-bezier(0.04, 0.32, 0.97, 0.88);
+}
+.active .icon-heart:nth-child(5) {
+	animation: heartFive 2s cubic-bezier(0.04, 0.32, 0.97, 0.88);
+}
+.hearts {
+	transition: 0.1s transform;
+}
+.inActive span {
+	right: 28px;
+	top: 47px;
+	font-size: 20px !important;
+}
+.inActive .count {
+	right: 0;
+	top: 0;
+	font-size: 12px !important;
+	text-shadow: inherit !important;
+	color: #fff !important;
+}
+@keyframes heart {
+	0% {
+		transform: translate3d(0px, 0px, 10px);
+	}
+	100% {
+		transform: translate3d(0px, 66px, 10px);
+	}
+}
+@keyframes heartOne {
+	0% {
+		transform: translate3d(0px, 0px, 10px);
+	}
+	100% {
+		transform: translate3d(-67px, -116px, 10px) rotate(7deg);
+		opacity: 0;
+	}
+}
+@keyframes heartTwo {
+	0% {
+		transform: translate3d(0px, 0px, 1px);
+	}
+	100% {
+		transform: translate3d(37px, -116px, 10px) rotate(4deg);
+		opacity: 0;
+	}
+}
+@keyframes heartThree {
+	0% {
+		transform: translate3d(0px, 0px, 10px);
+	}
+	100% {
+		transform: translate3d(37px, -86px, 10px) rotate(2deg);
+		opacity: 0;
+	}
+}
+@keyframes heartFour {
+	0% {
+		transform: translate3d(0px, 0px, 10px);
+	}
+	65% {
+		opacity: 0;
+	}
+	100% {
+		transform: translate3d(-37px, -96px, 10px) rotate(0deg);
+		opacity: 0;
+	}
+}
+@keyframes heartFive {
+	0% {
+		transform: translate3d(0px, 0px, 10px);
+	}
+	100% {
+		transform: translate3d(3px, -96px, 10px) rotate(4deg);
+		opacity: 0;
+	}
+}
